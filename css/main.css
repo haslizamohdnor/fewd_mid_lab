@@ -12,8 +12,399 @@
  * Blue for hovered links: #033641
  */
 
+
 /* Globals */
+
 body {
-  font-family: 'Cabin', sans-serif;
+    font-family: 'Cabin', sans-serif;
 }
 
+.flex {
+    display: flex;
+}
+
+.rover-header-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rover-header-container a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.rover-header-left a {
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.rover-header-right a {
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.rover-header-container img {
+    height: 50px;
+}
+
+.rover-header-right-mobile button {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .rover-header-right-mobile button {
+        display: block;
+        size: 10%;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .rover-header-left a {
+        display: none;
+    }
+    .rover-header-right a {
+        display: none;
+    }
+}
+
+.rover-hero-container {
+    height: 500px;
+    background-size: cover;
+    background-image: url("../img/hero.jpg");
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rover-hero-container h1 {
+    font-size: 50px;
+    color: rgb(95, 95, 95);
+    padding-left: 10px;
+}
+
+.rover-hero-container p {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(95, 95, 95);
+    padding-left: 10px;
+}
+
+.rover-hero-container2 {
+    display: none;
+}
+
+.rover-hero-container-mobile {
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    flex-direction: column;
+    color: rgb(95, 95, 95);
+    border: solid 3px rgb(230, 230, 230);
+}
+
+@media only screen and (max-width: 500px) {
+    .rover-hero-container2 {
+        display: block;
+    }
+    .rover-hero-container {
+        display: none;
+    }
+    #Button2:hover {
+        background-color: #10724b;
+        cursor: pointer;
+    }
+}
+
+#Button1 {
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 10px;
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    border: solid 1px black;
+    color: white;
+    background-color: #14a96d;
+}
+
+#Button2 {
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px;
+    color: white;
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    border: solid 1px black;
+    min-width: max-content;
+    background-color: #14a96d;
+}
+
+.modal {
+    display: none;
+}
+
+.modal-content {
+    text-align: center;
+    font-size: 20px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    flex-direction: column;
+    margin: 10% auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 1px solid rgb(138, 138, 138);
+    height: 40%;
+    width: 60%;
+}
+
+.rover-mobile-hero {
+    padding: 15px;
+    height: 200px;
+    width: 200px;
+}
+
+.rover-mobile-hero_img {
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.rover-mobile-hero {
+    display: none;
+}
+
+.rover-fact-indiv .text {
+    flex-direction: column;
+    width: 400px;
+}
+
+.grid1 {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid2 {
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid1 img {
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+}
+
+.rover-middle-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.rover-middle-section h2 {
+    margin: 10px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+    .rover-middle-section_container {
+        flex-direction: column;
+    }
+    .rover-mobile-hero {
+        display: block;
+    }
+}
+
+.rover-cta-box {
+    margin: 50px;
+}
+
+.rover-cta-box img {
+    height: 40px;
+    width: 40px;
+    padding: 15px;
+}
+
+.rover-protections a {
+    color: #0068c9;
+}
+
+.rover-cta-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-direction: row;
+    background-color: rgb(238, 238, 238);
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid rgb(214, 214, 214);
+    border-right: 2px solid rgb(214, 214, 214);
+    border-top: 2px solid rgb(214, 214, 214);
+}
+
+.rover-cta-bottom-container {
+    flex-direction: column;
+    padding: 10px;
+    height: 200px;
+    border: 2px solid rgb(214, 214, 214);
+}
+
+.rover-facts-container {
+    width: 40%;
+    padding: 15px;
+    margin: 15px;
+}
+
+.rover-protections a:hover {
+    color: #1811779f;
+}
+
+#Button3:hover {
+    background-color: #23493a;
+    cursor: pointer;
+}
+
+#Button3 {
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: solid 1px black;
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+    color: white;
+    background-color: #14a56b;
+    margin: 10px;
+    min-width: max-content;
+}
+
+.rover-action-dash {
+    width: 87px;
+    border: solid #11ac6e;
+}
+
+.rover-action-quote-container {
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+    top: -40px;
+    left: 40px;
+    background-color: white;
+    line-height: 30px;
+    height: 300px;
+    width: 380px;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: solid 2px rgb(124, 65, 65);
+}
+
+.rover-action-quote-container span {
+    font-size: 30px;
+    color: grey;
+}
+
+.rover-action-quote-container a {
+    text-decoration: none;
+    color: #14a96d;
+}
+
+.rover-action-quote-container a:hover {
+    text-decoration: none;
+    color: #10724b;
+}
+
+.rover-action-shot {
+    background-image: url("../img/lady-with-her-dogs.jpg");
+    width: 1400px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    background-size: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+    .rover-action-quote-container {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 405px;
+    }
+    .rover-action-shot {
+        background-size: cover;
+        width: 469px;
+        height: 600px;
+        margin: 1px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .grid3 {
+        grid-template-columns: 1fr;
+        row-gap: 70px;
+    }
+    .rover-123-item img {
+        padding: 10px;
+        height: 100px;
+        width: 100px;
+    }
+    .text123 {
+        flex-direction: column;
+        margin: 20px;
+    }
+    .rover-123-item {
+        flex-direction: row;
+    }
+}
+
+.rover-123-container {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.rover-123-item {
+    flex-direction: column;
+    align-items: center;
+}
+
+.rover-123-item img {
+    width: 110px;
+    height: 110px;
+}
+
+.rover-123-container-title {
+    padding: 20px;
+}
+
+.text123 {
+    flex-direction: column;
+    margin: 15px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+}
